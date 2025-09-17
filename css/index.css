@@ -150,11 +150,52 @@
             background-color: #D47B34;
         }
 
-        .upper-image {
+        /* .upper-image {
             position: absolute;
             bottom: -250px;
             left: 50%;
             transform: translateX(-50%);
+        } */
+        .upper-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 1000px) {
+            .upper-image {
+                margin-top: 120px;
+                margin-left: 100px;
+            }
+
+            .upper-image img {
+                width: 100%;
+                /* image ko chhota kar diya */
+            }
+        }
+
+
+
+        @media (max-width: 768px) {
+            .upper-image {
+                bottom: -120px;
+                /* chhoti screen par thoda adjust */
+            }
+
+            .upper-image img {
+                width: 80%;
+                /* image ko chhota kar diya */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .upper-image {
+                bottom: -80px;
+            }
+
+            .upper-image img {
+                width: 70%;
+            }
         }
 
         .footer {
