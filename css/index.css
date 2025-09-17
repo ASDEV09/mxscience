@@ -1,4 +1,8 @@
         /* Section three */
+a{
+    text-decoration: none;
+    color: #fff;
+}
         .section-three-heading {
             color: #1F254F;
             font-family: 'Raleway', sans-serif;

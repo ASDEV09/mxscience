@@ -30,7 +30,7 @@
     padding: 6px 18px;
 }
 .btn-contact:hover {
-    background-color: #b65f1f;
+    background-color: #527F8A;
     color: #fff;
 }
 
@@ -171,7 +171,10 @@ select:valid+.service { display: none; }
     width: 180px;
     height: 60px;
 }
-
+.contact-heading-a:hover{
+    background-color: #527F8A;
+    color: #fff;
+}
 /* ===========================
    Newsletter Section
 =========================== */
@@ -243,5 +246,12 @@ h3.newsletter-title {
     text-decoration: none;
 }
 .footer a:hover {
+    color: #fff;
+}
+.submit-btn{
+    background-color: #D47B34; color: #fff;
+}
+.submit-btn:hover{
+    background-color: #527F8A;
     color: #fff;
 }

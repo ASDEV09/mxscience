@@ -54,7 +54,7 @@
         }
 
         .btn-contact:hover {
-            background-color: #b65f1f;
+            background-color: #527F8A;
             color: #fff;
         }
 
@@ -79,6 +79,11 @@
             font-weight: bold;
             width: 180px;
             height: 60px;
+        }
+
+        .btn-orange:hover{
+            background-color: #527F8A;
+            color: #fff;
         }
 
         /* ---------- Section Four Cards ---------- */

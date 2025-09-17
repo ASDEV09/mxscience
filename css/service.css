@@ -100,7 +100,7 @@
         }
 
         .btn-contact:hover {
-            background-color: #b65f1f;
+            background-color: #527F8A;
             color: #fff;
         }
 
@@ -126,7 +126,7 @@
         }
 
         .btn-learn:hover {
-            background-color: #406670;
+            background-color: #d1752f;
             color: #fff;
         }
 
@@ -154,7 +154,9 @@
             width: 180px;
             height: 60px;
         }
-
+.btn-contactus:hover{
+    background-color: #527F8A;
+}
         .company-title {
             font-family: 'Raleway', sans-serif;
             font-size: 24px;
