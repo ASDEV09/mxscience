@@ -1,8 +1,9 @@
         /* Section three */
-a{
-    text-decoration: none;
-    color: #fff;
-}
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
         .section-three-heading {
             color: #1F254F;
             font-family: 'Raleway', sans-serif;
@@ -65,6 +66,10 @@ a{
             font-family: 'Cabin', sans-serif;
         }
 
+        .section-two-learn:hover {
+            background-color: #527F8A;
+        }
+
         .section-four {
             background-color: #1F254F;
             color: #fff;
@@ -125,6 +130,10 @@ a{
         .section-four-learn {
             background-color: #D47B34;
             font-family: 'Cabin', sans-serif;
+        }
+
+        .section-four-learn:hover {
+            background-color: #527F8A
         }
 
         .section-one {
@@ -349,6 +358,59 @@ a{
         }
 
         .btn-contact:hover {
-            background-color: #b65f1f;
+            background-color: #527F8A;
             color: #fff;
+        }
+
+        .service-learn-more {
+            background-color: #527F8A;
+            color: #fff;
+        }
+
+        .service-learn-more:hover {
+            background-color: #D47B34;
+        }
+
+        .explore-more-services {
+            background-color: #D47B34;
+        }
+
+        .explore-more-services:hover {
+            background-color: #527F8A;
+        }
+
+        .explore-all-btn {
+            width: 130px;
+            height: 52px;
+            background-color: #527F8A;
+            color: #fff;
+        }
+
+        .explore-all-btn:hover {
+            background-color: #D47B34;
+            color: #fff;
+        }
+
+        .blog-read-more {
+            background-color: #D47B34;
+            color: #fff;
+        }
+
+        .blog-read-more:hover {
+            background-color: #527F8A;
+            color: #fff;
+        }
+
+        .contact-btn-last {
+            font-family: 'Cabin', sans-serif;
+            background-color: #D47B34;
+            color: #fff;
+        }
+         .contact-btn-last:hover{
+            background-color: #527F8A;
+            color: #fff;
+        }
+
+        .oter-link-a:hover{
+            color: #fff
         }
