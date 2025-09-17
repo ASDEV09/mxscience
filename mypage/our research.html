@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navbar Example</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ---------- Global ---------- */
+        h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+        }
+
+        .newsletter-title {
+            color: #fff;
+        }
+
+        h3.newsletter-title {
+            font-size: 24px;
+        }
+
+        @media (min-width: 768px) {
+            h3.newsletter-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            h3.newsletter-title {
+                font-size: 40px;
+            }
+        }
+
+        /* ---------- Navbar ---------- */
+        .navbar-nav .nav-link {
+            color: #000;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 8px;
+            position: relative;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: "|";
+            position: absolute;
+            right: -12px;
+            color: #999;
+        }
+
+        .navbar-nav .nav-item:last-child .nav-link::after {
+            content: "";
+        }
+
+        .btn-contact {
+            background-color: #d1752f;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 6px;
+            padding: 6px 18px;
+        }
+
+        .btn-contact:hover {
+            background-color: #b65f1f;
+            color: #fff;
+        }
+
+        /* ---------- Section Headings ---------- */
+        .section-heading {
+            font-family: 'Raleway', sans-serif;
+            color: #1F254F;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .section-subtext {
+            font-family: 'Cabin', sans-serif;
+            color: #1F254F;
+        }
+
+        .btn-orange {
+            font-family: 'Cabin', sans-serif;
+            color: #fff;
+            background-color: #D47B34;
+            font-size: 16px;
+            font-weight: bold;
+            width: 180px;
+            height: 60px;
+        }
+
+        /* ---------- Section Four Cards ---------- */
+        .section-four {
+            background-color: #1F254F;
+            color: #fff;
+            height: 1000px;
+        }
+
+        .section-four-card {
+            background-color: #527F8A;
+        }
+
+        .section-four-card:hover {
+            background-color: #EABF61;
+        }
+
+        .section-four-card:hover .section-four-div-emoji {
+            background-color: #fff;
+            border-color: #fff;
+        }
+
+        .section-four-card:hover .section-four-emoji,
+        .section-four-card:hover .section-four-h1,
+        .section-four-card:hover .section-four-p {
+            color: #000;
+        }
+
+        .section-four-h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .section-four-p {
+            font-family: 'Cabin', sans-serif;
+            font-size: 16px;
+        }
+
+        .section-four-emoji {
+            font-size: 33px;
+            color: #527F8A
+        }
+
+        .section-four-div-emoji {
+            width: 64px;
+            height: 64px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        /* ---------- Footer ---------- */
+        .footer {
+            background-color: #1c2951;
+            color: #fff;
+            padding: 100px 0 40px;
+            position: relative;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .newsletter-box {
+            background: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .newsletter-box input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .newsletter-box button {
+            background: #D47B34;
+            border: none;
+            width: 20%;
+            padding: 20px 20px;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .footer h5 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer a {
+            color: #A7AEB4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .footer-text {
+            font-family: 'Cabin', sans-serif;
+            color: #A7AEB4;
+        }
+
+        .footer-copy {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .footer-highlight {
+            color: #D47B34;
+            font-weight: bold;
+        }
+
+        .footer-contact {
+            font-family: 'Cabin', sans-serif;
+        }
+
+        .footer-phone {
+            color: #D47B34;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm p-4">
+        <div class="container-fluid px-5">
+            <!-- Left Logo -->
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="../img/logo.png" alt="">
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Center Nav -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ourservices.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="our-work.html">Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="our testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog Entries.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Button -->
+            <a href="contact us.html" class="btn btn-contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Heading Section -->
+    <div style="background-color: #DAE4E6;">
+        <div class="section-bg">
+            <div class="container text-center py-3">
+                <div class="container text-center py-5"
+                    style="background: url('../img/div-one.png') center/contain no-repeat;">
+                    <h3 class="section-heading">Our Research</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Research Cards -->
+    <div class="container text-center mt-5">
+        <div class="row mt-4 g-4"> <!-- g-4 => gap between columns -->
+
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card rounded-2 h-100 section-four-card">
+                    <div class="card-body text-start ms-3 mt-2 text-light">
+                        <div class="section-four-div-emoji">
+                            <i class="bi bi-emoji-smile section-four-emoji"></i>
+                        </div>
+                        <h1 class="card-title mt-3 section-four-h1">
+                            Search Engine Optimization
+                        </h1>
+                        <p class="card-text section-four-p">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card rounded-2 h-100 section-four-card">
+                    <div class="card-body text-start ms-3 mt-2 text-light">
+                        <div class="section-four-div-emoji">
+                            <i class="bi bi-emoji-smile section-four-emoji"></i>
+                        </div>
+                        <h1 class="card-title mt-3 section-four-h1">
+                            Sitemap - Enable site indexing
+                        </h1>
+                        <p class="card-text section-four-p">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card rounded-2 h-100 section-four-card">
+                    <div class="card-body text-start ms-3 mt-2 text-light">
+                        <div class="section-four-div-emoji">
+                            <i class="bi bi-emoji-smile section-four-emoji"></i>
+                        </div>
+                        <h1 class="card-title mt-3 section-four-h1">
+                            Google <br> Analytics
+                        </h1>
+                        <p class="card-text section-four-p">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card rounded-2 h-100 section-four-card">
+                    <div class="card-body text-start ms-3 mt-2 text-light">
+                        <div class="section-four-div-emoji">
+                            <i class="bi bi-emoji-smile section-four-emoji"></i>
+                        </div>
+                        <h1 class="card-title mt-3 section-four-h1">
+                            Site <br> Security
+                        </h1>
+                        <p class="card-text  section-four-p">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card rounded-2 h-100 section-four-card">
+                    <div class="card-body text-start ms-3 mt-2 text-light">
+                        <div class="section-four-div-emoji">
+                            <i class="bi bi-emoji-smile section-four-emoji"></i>
+                        </div>
+                        <h1 class="card-title mt-3 section-four-h1">
+                            Site Optimization
+                        </h1>
+                        <p class="card-text section-four-p">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card rounded-2 h-100 section-four-card">
+                    <div class="card-body text-start ms-3 mt-2 text-light">
+                        <div class="section-four-div-emoji">
+                            <i class="bi bi-emoji-smile section-four-emoji"></i>
+                        </div>
+                        <h1 class="card-title mt-3 section-four-h1">
+                            ReCAPTCHA non-human
+                        </h1>
+                        <p class="card-text section-four-p">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card rounded-2 h-100 section-four-card">
+                    <div class="card-body text-start ms-3 mt-2 text-light">
+                        <div class="section-four-div-emoji">
+                            <i class="bi bi-emoji-smile section-four-emoji"></i>
+                        </div>
+                        <h1 class="card-title mt-3 section-four-h1">
+                            Social <br> Sharing
+                        </h1>
+                        <p class="card-text section-four-p">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card rounded-2 h-100 section-four-card">
+                    <div class="card-body text-start ms-3 mt-2 text-light">
+                        <div class="section-four-div-emoji">
+                            <i class="bi bi-emoji-smile section-four-emoji"></i>
+                        </div>
+                        <h1 class="card-title mt-3 section-four-h1">
+                            Lead Generating
+                        </h1>
+                        <p class="card-text section-four-p">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connect With Us -->
+    <div class="mt-5">
+        <div style="background-color: #DAE4E6;" class="py-5">
+            <div class="container text-center py-5"
+                style="background: url('../img/div-one.png') center/contain no-repeat;">
+                <h3 class="fw-bold fs-2 section-heading">Connect With Us!</h3>
+                <p class="mx-auto section-subtext">
+                    Ready to learn more? Getting in touch is easy. Use the form and request a consultation.
+                </p>
+                <button class="btn btn-lg btn-orange">
+                    Contact Us <img class="ms-2" src="../img/arrow.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div style="background-color: #527F8A;">
+        <div class="section-bg">
+            <div class="container text-center">
+                <div class="container text-center py-4">
+                    <h3 class="fw-bold mt-5 newsletter-title">Subscribe Our Newsletter</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="newsletter-box">
+            <input type="email" placeholder="Enter Your Email Address...">
+            <button>Subscribe Now <img class="ms-2" src="../img/arrow.png" alt=""></button>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-lg-3 mb-4">
+                    <img src="../img/div-two.png" style="width: 217px; height: 30px;" alt="">
+                    <p class="mt-4 footer-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s...
+                    </p>
+                    <div class="footer-copy">
+                        &copy; Copyright 2023 - <span class="footer-highlight">XMscience</span> - All Rights Reserved.
+                    </div>
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-lg-3 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled footer-links mt-4 footer-text">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourservices.html">Services</a></li>
+                        <li><a href="our-work.html">Work</a></li>
+                        <li><a href="#">Research</a></li>
+                    </ul>
+                </div>
+
+                <!-- Other Links -->
+                <div class="col-lg-3 mb-4">
+                    <h5>Others</h5>
+                    <ul class="list-unstyled footer-links mt-4 footer-text">
+                        <li><a href="our testimonials.html">Testimonials</a></li>
+                        <li><a href="Blog Entries.html">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="contact us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3">
+                    <h5>Get In Touch</h5>
+                    <div class="footer-contact">
+                        <p class="footer-phone">123-456-7890</p>
+                        <p>example@email.com</p>
+                        <p>Lorem Ipsum is simply dummy text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
